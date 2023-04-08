@@ -1,0 +1,76 @@
+:root {
+  --colorPrincipal: #3c498f;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+footer {
+  background-color: var(--colorPrincipal);
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  float: left;
+}
+
+body {
+  color: #ffffff;
+}
+
+.menu a:hover {
+  color: #000000;
+}
+
+header {
+  background-image: url(../imagenes/hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 100%;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+@media (min-width: 1281px) {
+  header {
+    padding-bottom: 45rem;
+  }
+
+  .menu {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1280px) {
+  header {
+    padding-bottom: 30rem;
+  }
+}
+
+@media (max-width: 560px) {
+  header {
+    padding-bottom: 14rem;
+  }
+  .menu a {
+    font-size: 0.75em;
+  }
+  footer p {
+    font-size: 0.75em;
+  }
+}
