@@ -5,7 +5,6 @@
 
 /* paleta personalizada */
 :root {
-
   --main-medium: #7fdff7;
   --main-fuente2: #df4040;
   --main-fuente: black;
@@ -15,7 +14,6 @@
 }
 
 /* edicion CSS del HTML */
-
 
 h1,
 h2,
@@ -66,7 +64,6 @@ nav {
   z-index: 5;
   display: auto;
   background-color: var(--colorPrincipal);
-
 }
 
 /* menues*/
@@ -89,7 +86,6 @@ a {
   font-size: 2.5em;
   color: black;
   font-weight: 600;
-
 }
 
 /* textos */
@@ -141,15 +137,12 @@ h4 {
   display: inline-block;
   width: 480px;
   height: auto;
-  animation-delay: 4s;
+  animation-delay: 5s;
   animation: zoomInDown;
-  animation-duration: 5s;
-
+  animation-duration: 6s;
 }
 
 /* logos */
-
-
 
 /* Suscribe*/
 
@@ -165,6 +158,10 @@ h4 {
 /* footer */
 
 .firma {
+  padding-top: 130px;
+  padding-bottom: 50px;
   font-weight: bolder;
+  font-size: x-large;
+  font-stretch: extra-expanded;
   color: var(--main-fuente);
 }
