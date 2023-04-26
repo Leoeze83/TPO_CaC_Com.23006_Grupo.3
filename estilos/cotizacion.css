@@ -1,66 +1,93 @@
-.contenedor {
-    background: var(--colorPrincipal);
-    overflow: hidden;
-    padding-bottom: 2rem;
-    display: block;
-    height: 40rem;
-    position: relative;
-    width: 100%;
-    float: center;
+:root {
+  --colorPrincipal: #3c498f;
+}
+
+body,
+header,
+main,
+footer {
+  /*border: 3px red;*/
+  min-height: 50px;
+  margin: 0, 5rem;
+  min-width: 400px;
+
+}
+
+main {
+  background-image: url(../imagenes/hero.png);
+  text-align: centers;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  height: 100%;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+/*Sacamos el estilo a nuestra lista desordenada */
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  float: left;
+  font-weight: 700;
+  text-align: centers;
+  padding-right: 0, 1rem;
+
+}
+
+header {
+  background-image: url(../imagenes/hero.png);
+  width: 100%;
+}
+
+section {
+  /*background-color: var(--colorPrincipal);*/
+  text-align: centers;
+
+}
+
+.btn {
+  background-color: rgb(5, 243, 243);
+  display: inline-block;
+  width: 188px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  padding: 13px 20px;
+  margin: 4px 2px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: rgba(15, 202, 202, 0.749);
+}
+
+@media (min-width: 1000px) {
+  main {
+    padding-bottom: 45rem;
   }
-  
-  .bloque img {
-    display: block;
-    margin: 2rem auto 0 auto;
-    width: 45%;
+}
+
+@media (max-width: 1280px) {
+  header {
+    padding-bottom: 30rem;
   }
-  
-  .bloque h2 {
-    padding: 0 1rem;
-    font-size: 2rem;
-    text-align: center;
-  }
-  
-  .bloque p {
-    padding: 0 3rem;
-    font-size: 0.8rem;
-    text-align: justify;
-  }
-  
-  @media (min-width: 1281px) {
-    .contenedor {
-      height: 200rem;
-    }
-    .bloque h2 {
-      font-size: 3rem;
-    }
-  
-    .bloque p {
-      font-size: 2rem;
-    }
-  }
-  
-  @media (max-width: 1280px) {
-    .contenedor {
-      height: 80rem;
-    }
-  
-    .bloque img {
-      width: 80%;
-    }
-  
-    .bloque p {
-      font-size: 1rem;
-    }
-  }
-  
-  @media (max-width: 560px) {
-    .bloque h2 {
-      font-size: 1.5rem;
-    }
-    div {
-      transform: rotate(5deg);
-      transform: scale(2,2); /* Esta línea sobreescribe a la anterior */
-     }
-     
-  }
+}
+
+section>h2,
+section>p {
+  color: #fff;
+}
+
+footer>h2,
+p {
+
+  color: #000;
+}
+
+footer {
+  background-color: var(--colorPrincipal);
+  text-align: center;
+}
