@@ -58,28 +58,46 @@ h1 {
   -webkit-text-stroke: 1px var(--main-dark);
 }
 
+/* NavBar*/
+
 nav {
+  display: inline-flex;
   margin-top: 15px;
   position: sticky;
   z-index: 5;
-  display: auto;
-  background-color: var(--colorPrincipal);
+
 }
 
-/* menues*/
-
-.botonmenu {
-  background: none;
-  cursor: pointer;
-  display: grid;
-  margin: auto;
+nav {
+  background-color: none;
+  overflow: hidden;
 }
 
-.botonmenu:hover {
-  background-color: rgb(93, 95, 93);
-  transition: all 1s;
-  margin: auto;
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
 
 a {
   text-decoration: none;
@@ -89,6 +107,7 @@ a {
 }
 
 /* textos */
+
 p {
   color: var(--main-dark);
   text-align: center;
@@ -165,3 +184,28 @@ h4 {
   font-stretch: extra-expanded;
   color: var(--main-fuente);
 }
+
+/*Responsive*/
+
+@media (min-width: 1281px) {
+  header {
+    background-size: contain;
+  }
+
+  p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+
+@media (max-width: 1280px) {}
+
+
+
+
+
+
+
+@media (max-width: 560px) {}
