@@ -47,6 +47,13 @@ body {
   background-color: var(--colorPrincipal);
 }
 
+/* Modo Oscuro - Claro . Automatico segun config de Browser */
+body {
+  background-color: Canvas;
+  color: CanvasText;
+  color-scheme: light dark;
+}
+
 /* NavBar */
 
 .cont_nav {
