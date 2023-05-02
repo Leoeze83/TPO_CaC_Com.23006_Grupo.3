@@ -47,8 +47,66 @@ body {
   background-color: var(--colorPrincipal);
 }
 
-header {
-  margin-top: 2px;
+/* Modo Oscuro - Claro . Automatico segun config de Browser */
+body {
+  background-color: Canvas;
+  color: CanvasText;
+  color-scheme: light dark;
+}
+
+/* NavBar */
+
+.cont_nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #93aeff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8%;
+}
+
+nav {
+  display: inline-flex;
+  margin-top: 15px;
+
+}
+
+nav {
+  background-color: none;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+nav li a:hover {
+  color: #f1c76c;
+  font-weight: bolder;
+  border-radius: 35%;
+}
+
+div .logo {
+  width: auto;
+  margin-right: 30px;
 }
 
 h1 {
@@ -58,37 +116,16 @@ h1 {
   -webkit-text-stroke: 1px var(--main-dark);
 }
 
-nav {
-  margin-top: 15px;
-  position: sticky;
-  z-index: 5;
-  display: auto;
-  background-color: var(--colorPrincipal);
-}
+/*Dashboard - Link */
 
-/* menues*/
-
-.botonmenu {
-  background: none;
-  cursor: pointer;
-  display: grid;
-  margin: auto;
-}
-
-.botonmenu:hover {
-  background-color: rgb(93, 95, 93);
-  transition: all 1s;
-  margin: auto;
-}
-
-a {
-  text-decoration: none;
+a.dashboard {
   font-size: 2.5em;
-  color: black;
-  font-weight: 600;
+  color: rgb(248, 137, 137);
+  font-weight: 500;
 }
 
 /* textos */
+
 p {
   color: var(--main-dark);
   text-align: center;
@@ -123,6 +160,11 @@ h3 {
   -webkit-text-stroke: 1px var(--main-dark);
 }
 
+.button {
+  display: inline-flex;
+  align-items: center;
+}
+
 h4 {
   font-size: 1.5em;
   stroke: blue;
@@ -145,6 +187,9 @@ h4 {
 /* logos */
 
 /* Suscribe*/
+.e-mail {
+  margin-bottom: 25px;
+}
 
 .suscribe {
   background-color: orange;
@@ -158,10 +203,38 @@ h4 {
 /* footer */
 
 .firma {
-  padding-top: 130px;
+  padding-top: 30px;
   padding-bottom: 50px;
   font-weight: bolder;
   font-size: x-large;
   font-stretch: extra-expanded;
   color: var(--main-fuente);
+}
+
+/*Responsive*/
+
+@media (min-width: 1281px) {
+  header {
+    background-size: contain;
+  }
+
+  p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+@media (max-width: 560px) {
+  img.figanimada {
+    width: 100%;
+  }
+
+  img.btc {
+    width: 95%;
+  }
+
+  iframe {
+    width: 100%;
+  }
 }
