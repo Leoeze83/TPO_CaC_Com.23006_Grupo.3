@@ -64,7 +64,8 @@
     font-family: Helvetica;
   }
   .content {
-    max-width: 960px;
+    width: 80%;
+    max-width: 1000px;
     margin:0 auto;
     font-size:2.5em;
   }
@@ -114,6 +115,24 @@
     aside {
       width: 49%;
       margin-top:0;
+    }
+    @media screen (max-width: 800px;){
+
+     
+  
+    #principal {
+      width: 100%;
+    }
+    aside {
+      width: 100%;
+      margin-top:0;
+    }
+content {
+      width: 100%;
+    }
+article {
+      width: 100%;
+    }
     }
   
   
