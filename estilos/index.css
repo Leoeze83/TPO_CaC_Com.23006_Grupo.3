@@ -71,10 +71,6 @@ body {
 nav {
   display: inline-flex;
   margin-top: 15px;
-
-}
-
-nav {
   background-color: none;
   overflow: hidden;
 }
@@ -224,8 +220,22 @@ h4 {
   }
 }
 
-
 @media (max-width: 560px) {
+  div .logo {
+    width: auto;
+    margin-right: 0px;
+  }
+
+  nav {
+    display: inline-flex;
+    margin-top: 25px;
+    overflow: scroll;
+  }
+
+  nav li a {
+    font-size: medium;
+  }
+
   img.figanimada {
     width: 100%;
   }
@@ -237,4 +247,6 @@ h4 {
   iframe {
     width: 100%;
   }
+
+
 }
