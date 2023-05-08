@@ -15,6 +15,7 @@
 
 /* edicion CSS del HTML */
 
+
 h1,
 h2,
 h3,
@@ -44,31 +45,45 @@ body {
   padding: 1px;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--colorPrincipal);
+  background-color: black;
 }
 
-header {
-  margin-top: 2px;
+/*Modo Oscuro - Claro . Automatico segun config de Browser*/
+
+body {
+  background-color: Canvas;
+  color: CanvasText;
+  color-scheme: light dark;
 }
 
-h1 {
-  color: var(--main-fuentebtc);
-  font-size: 2.5em;
-  font-weight: 900;
-  -webkit-text-stroke: 1px var(--main-dark);
+/* NavBar */
+
+.cont_nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  place-content: space-between;
+  justify-content: center;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8%;
 }
 
-/* NavBar*/
+.title-adapt {
+  display: none;
+  color: #efc775;
+}
+
+#menu,
+#menu-check {
+  display: none;
+}
 
 nav {
   display: inline-flex;
   margin-top: 15px;
-  position: sticky;
-  z-index: 5;
-
-}
-
-nav {
   background-color: none;
   overflow: hidden;
 }
@@ -89,21 +104,33 @@ nav li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-size: 40px;
 }
 
 nav li a:hover {
-  background-color: #ddd;
-  color: black;
+  color: #f1c76c;
+  font-weight: bolder;
+  border-radius: 35%;
 }
 
+div .logo {
+  width: auto;
+  margin-right: 30px;
+}
 
-
-
-a {
-  text-decoration: none;
+h1 {
+  color: var(--main-fuentebtc);
   font-size: 2.5em;
-  color: black;
-  font-weight: 600;
+  font-weight: 900;
+  -webkit-text-stroke: 1px var(--main-dark);
+}
+
+/*Dashboard - Link */
+
+a.dashboard {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: orange;
+  font-size: 30px;
 }
 
 /* textos */
@@ -142,6 +169,11 @@ h3 {
   -webkit-text-stroke: 1px var(--main-dark);
 }
 
+.button {
+  display: inline-flex;
+  align-items: center;
+}
+
 h4 {
   font-size: 1.5em;
   stroke: blue;
@@ -151,19 +183,27 @@ h4 {
 }
 
 /* imagenes*/
+
+/*Imagen con animacion*/
 .figanimada {
-  /*Imagen con animacion*/
+
   display: inline-block;
   width: 480px;
   height: auto;
-  animation-delay: 5s;
-  animation: zoomInDown;
-  animation-duration: 6s;
 }
 
-/* logos */
+.figanimada:hover {
+  animation-delay: 4s;
+  animation: rubberBand;
+  animation-duration: 5s;
+}
+
+
 
 /* Suscribe*/
+.e-mail {
+  margin-bottom: 25px;
+}
 
 .suscribe {
   background-color: orange;
@@ -177,12 +217,13 @@ h4 {
 /* footer */
 
 .firma {
-  padding-top: 130px;
-  padding-bottom: 50px;
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 30px;
   font-weight: bolder;
   font-size: x-large;
   font-stretch: extra-expanded;
-  color: var(--main-fuente);
+  color: orange
 }
 
 /*Responsive*/
@@ -198,14 +239,111 @@ h4 {
   }
 }
 
+@media (max-width: 560px) {
+  div .logo {
+    width: auto;
+    margin-right: 0px;
+  }
 
+  .cont_nav {
+    display: flex;
+    place-content: space-between;
+  }
 
-@media (max-width: 1280px) {}
+  .title-adapt {
+    display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
 
+  /* Menu Hamburguer*/
 
+  #menu-check:not(:checked)~nav {
+    display: none
+  }
 
+  #menu-check:checked~nav {
+    display: block;
+  }
 
+  #menu {
+    display: block;
+    color: #ff9100;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 0.5em;
+    top: 0.3em;
+    z-index: 9999;
+  }
 
+  #menu:hover {
+    color: black;
+    background-color: #ff9100;
+  }
 
+  #menu-cerrar {
+    display: none;
+  }
 
-@media (max-width: 560px) {}
+  #menu-check:checked~label #menu-abrir {
+    display: none;
+  }
+
+  #menu-check:checked~label #menu-cerrar {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    background-color: rgb(240, 237, 237);
+    padding-top: 0.3em;
+    opacity: 70%;
+  }
+
+  nav li a {
+    color: red;
+    font-weight: bold;
+  }
+
+  nav {
+    display: inline-flex;
+    margin-top: 50px;
+    overflow: scroll;
+  }
+
+  nav li a {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: x-large;
+  }
+
+  /*-----------------------------------------------*/
+
+  img.figanimada {
+    width: 100%;
+  }
+
+  img.btc {
+    width: 95%;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .firma {
+    font-size: medium;
+    padding-bottom: 7%;
+    padding-top: 4%;
+    color: var(--main-pie);
+    background-color: black;
+  }
+}

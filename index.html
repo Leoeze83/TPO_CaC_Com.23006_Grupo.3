@@ -3,26 +3,44 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Crypto-Easy</title>
   <link rel="stylesheet" href="./estilos/estilos.css" />
   <link rel="stylesheet" href="./estilos/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <!-- INSERTAR .ico  PARA LA PESTAÑA DEL BROWSER-->
+  <!-- INSERTAR .ico  PARA LA PESTAÑA DEL BROWSER- con FAVICON-->
+  <link rel="apple-touch-icon" sizes="180x180" href="imagenes/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imagenes/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="imagenes/favicon_io/site.webmanifest">
 </head>
 
 <body>
   <header>
-    <nav>
-      <ul>
-        <li> <a href="./index.html">Home</a></li>
-        <li><a href="./quienes.html">Acerca de</a></li>
-        <li> <a href="./cotizacion.html">Cotizacion</a></li>
-        <li><a href="./contactos.html">Contacto</a></li>
-      </ul>
-    </nav>
-
+    <div class="cont_nav">
+      <a href="./index.html">
+        <img class="logo" src="imagenes/B-48px.png" alt="Logo- Inicio">
+      </a>
+      <div class="title-adapt">
+        <h2>Cripto Easy </h2>
+      </div>
+      <input type="checkbox" id="menu-check">
+      <label id="menu" for="menu-check">
+        <span id="menu-abrir">&#9776 </span>
+        <span id="menu-cerrar">X</span>
+      </label>
+      <nav>
+        <ul>
+          <li> <a href="./index.html">Home</a></li>
+          <li> <a href="./cotizacion.html">Cotizacion</a></li>
+          <li><a href="./quienes.html">Quienes Somos</a></li>
+          <li><a href="./contac.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    </div>
   </header>
 
   <!-- Criptomonedas -->
@@ -31,18 +49,18 @@
     <h1>Criptomonedas: Las Finanzas del Futuro</h1>
     <article>
       <main>
-
         <p class="info">
           Las criptomonedas, en esencia, son monedas digitales que utilizan métodos de criptografía para asegurar las
           transacciones. Esto significa que es un sistema descentralizado en el que mediante la tecnología blockchain,
           también conocida como cadena de bloques, cada agente de la red garantiza la seguridad y el equilibrio de las
           transacciones, alejando el modelo de los bancos centrales tradicionales.
-
           De este modo las criptomonedas eliminan el papel del intermediario en todas las transacciones, acelerando cada
           proceso dentro de una red en la que todos los usuarios velan por el buen funcionamiento del entramado.
         </p>
+        <br>
+
         <figure>
-          <img class="figanimada" src="./imagenes/grafico-statista_cripto_800x933.jpeg" alt="grafico" class="grafico" />
+          <img class="figanimada" src="./imagenes/grafico-statista_cripto_800x933.jpeg" alt="grafico" />
           <figcaption>Para tirar abajo la red de Bitcoin probablemente habría que apagar por completo internet en el
             planeta entero. Si esto sucediera, los problemas mundiales serían mucho mayores que el hecho de parar la red
             de Bitcoin.</figcaption>
@@ -50,22 +68,23 @@
       </main>
     </article>
   </div>
+  <br>
   <div>
     <b>
       Puedes observar el Dashboard de capitalizacion de mercado de cada Cripto desde :
       <a href="https://coinmarketcap.com/es/" alt="dashboard" class="dashboard"> Coinmarket </a>
     </b>
   </div>
-
+  <br>
   <!-- BTC-->
 
   <div class="btc">
     <h2>El Gigante de las Criptomonedas</h2>
+    <br>
     <p class="info">Bitcoin (BTC) es la criptomoneda más antigua de todas y nació en el año 2009 de la mano de Satoshi
       Nakamoto, una persona o grupo de personas de quien se desconoce la identidad, que describió a este tipo de moneda
       virtual como "un sistema de dinero electrónico de igual a igual", tal y como se bautiza en el documento
       fundacional de Bitcoin.
-
       En el manifiesto se dan algunas de las claves de su funcionamiento: "el sistema permitirá que los pagos en línea
       sean mandados directamente de una parte a la otra sin necesidad de pasar por una institución financiera". En el
       documento también se añade que las firmas digitales son parte de la solución, pero hace hincapié en que los
@@ -75,6 +94,7 @@
       iguales, que marca cada transacción y la incluye en una cadena donde se forma un registro. Este no puede ser
       cambiado sin rehacer de nuevo cada uno de los registros de cada transacción".
     </p>
+    <br>
     <figure>
       <img src="./imagenes/btc_img_home.webp" alt="btc" class="btc" />
       <figcaption>
@@ -84,12 +104,14 @@
     </figure>
     </article>
   </div>
-
+  <br>
+  <br>
   <!-- Blockchain -->
 
   <div class="blockchain">
     <article>
       <h3>¿ Ques es la red Blockchain?</h3>
+      <br>
       <p class="info">
         Blockchain es un sistema descentralizado. Las operaciones se registran en los ordenadores de todos los que
         participan en la cadena, incluyendo datos como cantidad, fecha, operación y participantes. Una vez compartidas y
@@ -111,20 +133,23 @@
       </figure>
     </article>
   </div>
+  <br>
 
   <!-- suscribe -->
-
-  <h4>Recibe nuestros analisis gratis !!!</h4>
+  <div class="button">
+    <h4>Recibe nuestros analisis gratis !!!</h4>
+  </div>
   <br>
-  <div>
+  <div class="e-mail">
     <b>
       Tu e-mail:
     </b>
     <input type="email" name="e-mail" placeholder="satoshi@crypto-easy.com" required />
     <button class="suscribe">Suscribite...!</button>
   </div>
-  <!-- fin!! -->
-
+  <hr>
+  <hr>
+  <!-- Footer-->
   <footer>
     <figcaption class="firma">
       &copy; by Group III - 23006 for Codo a Codo &copy;
@@ -134,3 +159,5 @@
 </body>
 
 </html>
+
+<!-- fin!! -->
