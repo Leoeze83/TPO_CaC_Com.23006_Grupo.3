@@ -1,93 +1,192 @@
-:root {
-  --colorPrincipal: #3c498f;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-body,
-header,
-main,
-footer {
-  /*border: 3px red;*/
-  min-height: 50px;
-  margin: 0, 5rem;
-  min-width: 400px;
-
-}
-
-main {
-  background-image: url(../imagenes/hero.png);
-  text-align: centers;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
+html {
   height: 100%;
-  padding-bottom: 1rem;
-  position: relative;
-}
-
-/*Sacamos el estilo a nuestra lista desordenada */
-.menu ul {
-  list-style: none;
-}
-
-.menu li {
-  float: left;
-  font-weight: 700;
-  text-align: centers;
-  padding-right: 0, 1rem;
 
 }
 
-header {
-  background-image: url(../imagenes/hero.png);
-  width: 100%;
-}
-
-section {
-  /*background-color: var(--colorPrincipal);*/
-  text-align: centers;
+body {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
 
 }
 
-.btn {
-  background-color: rgb(5, 243, 243);
-  display: inline-block;
-  width: 188px;
-  text-align: center;
+
+.menu-link {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: white;
   text-decoration: none;
-  color: #fff;
-  padding: 13px 20px;
-  margin: 4px 2px;
-  border-radius: 10px;
-}
-
-.btn:hover {
-  background-color: rgba(15, 202, 202, 0.749);
-}
-
-@media (min-width: 1000px) {
-  main {
-    padding-bottom: 30rem;
-  }
-}
-
-@media (max-width: 1280px) {
-  header {
-    padding-bottom: 30rem;
-  }
-}
-
-section>h2,
-section>p {
-  color: #fff;
-}
-
-footer>h2,
-p {
-
-  color: #000;
-}
-
-footer {
-  background-color: var(--colorPrincipal);
   text-align: center;
+  background: #a35858;
+  border-radius: 10px;
+
+}
+
+.menu-link:hover {
+  background: #6c5e5e;
+
+}
+
+.menu {
+  margin: 0;
+  padding-left: 10px;
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fill, 120px);
+  justify-content: center;
+}
+
+.menu-item {
+  padding-left: 1px;
+  border-radius: 10px;
+
+
+}
+
+.grid-container>* {
+  box-shadow: -1px 1px 7px 0px rgb(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 0px;
+  text-align: center;
+
+}
+
+.grid-container {
+  display: grid;
+  gap: 0px;
+  /* vista para celulares*/
+  grid-template:
+    "header" 100px
+    "navbar" 50px
+    "izquierda" auto
+    "contenido" 100px
+    "footer" 100px;
+}
+
+.header {
+  grid-area: header;
+  background-color: rgb(181, 252, 228);
+
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.navbar {
+  grid-area: navbar;
+  background-color: rgb(0, 0, 0);
+  padding-top: 5px;
+}
+
+.izquierda {
+  grid-area: izquierda;
+  background-color: rgb(128, 156, 210);
+}
+
+.contenido {
+  grid-area: contenido;
+  background-color: rgb(240, 174, 240);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(248, 246, 117);
+}
+
+@media(min-width:600px) {
+  .grid-container {
+    /*background-color: blue;*/
+    /* grid-template-columns: 200px auto; /* esto indica el tamaño de la columna*/
+    /* grid-template-rows: 100px 50px auto 100px; /* nos indica el tamaño de las filas*/
+    /* grid-template-areas:
+      "header header"
+      "navbar navbar"
+      "izquierda contenido"
+      "footer footer"; */
+
+    /*forma mas elegante de poner el tamaño vista para tables*/
+    grid-template:
+      "header header" 100px
+      "navbar navbar" 50px
+      "izquierda contenido" auto
+      "footer footer" 100px / 200px auto;
+    /* luego del eslash se pone el ancho de las columnas*/
+
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, 290px);
+    justify-content: center;
+  }
+  .menu-item {
+    padding-left: 20px;
+    border-radius: 10px;
+  
+  
+  }
+
+
+}
+
+@media (min-width 700px) {
+  .grid-container {
+    /*vista para monitores*/
+    grid-template:
+      "header header header" 100px
+      "navbar izquierda contenido" auto
+      "footer footer footer" 100px / 200px auto 200px;
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, 290px);
+    justify-content: center;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+}
+
+/*Copiando Estilo del Index*/
+.firma {
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-weight: bolder;
+  font-size: x-large;
+  font-stretch: extra-expanded;
+  color: orange
 }
