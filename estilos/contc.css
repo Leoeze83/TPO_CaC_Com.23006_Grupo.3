@@ -51,14 +51,14 @@ body{
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	background-color: #5b5b5b;
+	background-color: #efc775;
     
 
 }
 
 .left{
     font-size: 1.1rem;
-	background-color: #555555;
+	background-color: #efc775;
 	background-size: cover;
 	height: 100%;
 }
@@ -89,7 +89,7 @@ textarea{
 .boton{
 	width: 50%;
 	padding: 0.5rem 1rem;
-	background-color: #4f6cc8;
+	background-color: #9397a5;
 	color: #3a0264;
 	font-size: 1rem;
 	outline: none;
