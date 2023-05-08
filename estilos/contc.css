@@ -99,6 +99,56 @@ textarea{
 
 
 
+
+
+
+
+.header{
+    background-color: #06b0ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+.headerlist{
+    list-style: none;
+}
+
+.headerlist li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.headerlist li:hover{
+    transform: scale(1.1);
+}
+
+.headerlist a{
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;    
+}
+
+.headerlist li a:hover{
+    color: #ffbc0e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 880px){
     .contact-box{grid-template-columns: 1fr;}
 	.left{
