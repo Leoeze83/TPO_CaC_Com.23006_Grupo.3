@@ -69,6 +69,7 @@ body {
   top: 0;
   width: 100%;
   height: 8%;
+  z-index: 99999;
 }
 
 .title-adapt {
@@ -304,6 +305,7 @@ h4 {
     background-color: rgb(240, 237, 237);
     padding-top: 0.3em;
     opacity: 70%;
+    z-index: 9999;
   }
 
   nav li a {
@@ -338,6 +340,8 @@ h4 {
   iframe {
     width: 100%;
   }
+
+  /* Footer*/
 
   .firma {
     font-size: medium;
