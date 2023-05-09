@@ -48,13 +48,14 @@ body {
   background-color: black;
 }
 
-/*Modo Oscuro - Claro . Automatico segun config de Browser*/
+/*Modo Oscuro - Claro . Automatico segun config de Browser
 
 body {
   background-color: Canvas;
   color: CanvasText;
   color-scheme: light dark;
 }
+*/
 
 /* NavBar */
 
