@@ -1,0 +1,317 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Quicksand', sans-serif;
+       position: relative;
+  
+
+}
+
+  .mapa iframe{width:100%;
+    height: 20rem;}
+
+body{
+    background-color: black;
+	height: 100vh;
+	width: 100%;
+    margin: 0;
+    padding:0;
+}
+
+
+
+.container{
+	position: relative;
+    top: 0;
+    
+	 width: 100%;
+	height: 100%;
+    	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-top:0 ;
+	
+}
+.container1{
+	position: relative;
+    top: 0;
+    bottom: 0;
+    margin-top:0 ;
+	
+}
+
+
+
+
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #efc775;
+    
+
+}
+
+.left{
+    font-size: 1.1rem;
+	background-color: #efc775;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+
+
+.form{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+    box-sizing: border-box;
+	
+}
+
+
+textarea{
+	min-height: 150px;
+}
+
+.boton{
+	width: 50%;
+	padding: 0.5rem 1rem;
+	background-color: #9397a5;
+	color: #3a0264;
+	font-size: 1rem;
+	outline: none;
+	cursor: pointer;
+}
+
+
+
+
+.header{
+    background-color: #06b0ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+.headerlist{
+    list-style: none;
+}
+
+.headerlist li{
+    display: inline-block;
+    padding: 0 20px;    
+}
+
+.headerlist li:hover{
+    transform: scale(1.1);
+}
+
+.headerlist a{
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;    
+}
+
+.headerlist li a:hover{
+    color: #ffbc0e;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 880px){
+    .contact-box{grid-template-columns: 1fr;}
+	.left{
+		height: 100%;
+	}
+}
+
+
+
+
+
+
+/* NavBar */
+
+.cont_nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	place-content: space-between;
+	justify-content: center;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 8%;
+  }
+  
+  .title-adapt {
+	display: none;
+	color: #efc775;
+  }
+  
+  #menu,
+  #menu-check {
+	display: none;
+  }
+  
+  nav {
+	display: inline-flex;
+	margin-top: 15px;
+	background-color: none;
+	overflow: hidden;
+  }
+  
+  nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  nav li {
+	float: left;
+  }
+  
+  nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 40px;
+  }
+  
+  nav li a:hover {
+	color: #f1c76c;
+	font-weight: bolder;
+	border-radius: 35%;
+  }
+  
+  div .logo {
+	width: auto;
+	margin-right: 30px;
+  }
+  
+  h1 {
+	color: var(--main-fuentebtc);
+	font-size: 2.5em;
+	font-weight: 900;
+	-webkit-text-stroke: 1px var(--main-dark);
+  }
+
+  
+  
+  #menu-check:not(:checked)~nav {
+    display: none
+  }
+
+  #menu-check:checked~nav {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    color: #ff9100;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 0.5em;
+    top: 0.3em;
+    z-index: 9999;
+  }
+
+  #menu:hover {
+    color: black;
+    background-color: #ff9100;
+  }
+
+  #menu-cerrar {
+    display: none;
+  }
+
+  #menu-check:checked~label #menu-abrir {
+    display: none;
+  }
+
+  #menu-check:checked~label #menu-cerrar {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    background-color: rgb(240, 237, 237);
+    padding-top: 0.3em;
+    opacity: 70%;
+  }
+
+  nav li a {
+    color: red;
+    font-weight: bold;
+  }
+
+  nav {
+    display: inline-flex;
+    margin-top: 50px;
+    overflow: scroll;
+  }
+
+  nav li a {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: x-large;
+  }
+
+  /*-----------------------------------------------*/
+
+  img.figanimada {
+    width: 100%;
+  }
+
+  img.btc {
+    width: 95%;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .firma {
+    font-size: medium;
+    padding-bottom: 7%;
+    padding-top: 4%;
+    color: var(--main-pie);
+    background-color: black;
+  }
