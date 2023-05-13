@@ -27,9 +27,9 @@ h4 {
 
 a {
   font-family: "Comfortaa", sans-serif;
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
-}
+  }
 
 b {
   color: #ffffff;
@@ -103,10 +103,11 @@ nav li {
 nav li a {
   display: block;
   color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 nav li a:hover {
