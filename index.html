@@ -145,8 +145,13 @@
       Tu e-mail:
     </b>
     <input type="email" name="e-mail" placeholder="satoshi@crypto-easy.com" required />
-    <button class="suscribe">Suscribite...!</button>
+    <button id="boton" class="suscribe">Suscribir...!</button>
+    <!-- Alerta al presionar el button "Suscribir"-->
+    <script>
+      document.getElementById("boton").onclick = () => alert("Gracias por suscribirte")
+    </script>
   </div>
+
   <hr>
   <hr>
   <!-- Footer-->
