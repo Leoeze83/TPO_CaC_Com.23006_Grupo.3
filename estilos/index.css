@@ -29,7 +29,7 @@ a {
   font-family: "Comfortaa", sans-serif;
   font-weight: 900;
   font-style: normal;
-  }
+}
 
 b {
   color: #ffffff;
@@ -107,7 +107,7 @@ nav li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 50px;
 }
 
 nav li a:hover {
