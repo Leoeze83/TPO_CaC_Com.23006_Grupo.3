@@ -1,4 +1,3 @@
-
 const formulario = document.getElementById('form');
 const nombreInput = document.getElementById('nombre');
 const correoInput = document.getElementById('correo');
@@ -7,7 +6,7 @@ const mensajeInput = document.getElementById('mensaje');
 const alerta = document.getElementById('alerta');
 
 formulario.addEventListener('submit', function(event) {
-  event.preventDefault(); // Evita el envío automático del formulario
+  event.preventDefault(); // Prevents automatic form submission
 
   if (nombreInput.value.trim() === '') {
     mostrarAlerta('Por favor, ingresa tu nombre');
@@ -33,15 +32,20 @@ formulario.addEventListener('submit', function(event) {
     return;
   }
 
+  if (!/^\d+$/.test(telefonoInput.value.trim())) {
+    mostrarAlerta('Por favor, ingresa solo números en el campo de teléfono');
+    telefonoInput.focus();
+    return;
+  }
+
   if (mensajeInput.value.trim() === '') {
     mostrarAlerta('Por favor, ingresa tu mensaje');
     mensajeInput.focus();
     return;
   }
 
-  // Si llega hasta aquí, todos los campos son válidos
-  alerta.innerHTML = ''; // Limpia el mensaje de alerta si lo hay
-  formulario.submit(); // Envía el formulario
+  alerta.innerHTML = ''; // Clears the alert message if any
+  formulario.submit(); // Submits the form
 });
 
 function mostrarAlerta(mensaje) {
@@ -49,7 +53,6 @@ function mostrarAlerta(mensaje) {
 }
 
 function validarCorreoElectronico(correo) {
-  // Utiliza una expresión regular para validar el formato del correo electrónico
   const expresionRegular = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return expresionRegular.test(correo);
 }
