@@ -42,7 +42,11 @@ body{
 }
 
 
+.alerta{
+  color: red;
+  width: 200px;
 
+}
 
 .contact-box{
 	max-width: 850px;

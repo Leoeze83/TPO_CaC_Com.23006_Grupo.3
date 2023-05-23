@@ -45,16 +45,18 @@
                      <p align="center"> <a href="https://www.facebook.com/codoacodooficial" ><img src="imagenes/facebook (3).png" width="50"> <a/> &nbsp &nbsp &nbsp &nbsp <a href="https://www.instagram.com/programacodoacodo/" ><img src="imagenes/instagram.png" width="50"> <a/> &nbsp &nbsp &nbsp &nbsp <a href="https://twitter.com/i/flow/login" ><img src="imagenes/gorjeo.png" width="50"> <a/>
                         <br><br><br><br>
                     </div>
-			<div class="right">
+			<form class="right" id="form">
 				<h2>Contactese con nosotros</h2>
                 <br><br>
-				<input type="text" class="form" placeholder="Nombre" required >
-				<input type="text" class="form" placeholder="Correo" required >
-				<input type="text" class="form" placeholder="Telefono" required >
-				<textarea placeholder="Mensaje" class="form" required ></textarea>
-				<button class="boton">Enviar</button>
-			</div>
+				<input type="text" class="form" placeholder="Nombre" id="nombre">
+				<input type="text" class="form" placeholder="Correo"  id="correo" >
+				<input type="text" class="form" placeholder="Telefono"  id="telefono">
+				<textarea placeholder="Mensaje" class="form"  id="mensaje"></textarea>
+				<button type="submit" class="boton">Enviar</button>
+        <p class="alerta" id="alerta"></p>
+      </form>
 		</div>
+ 
 	</div>
 
 
@@ -71,7 +73,7 @@
    </div>
 
 
-  
+   <script src="contact.js"></script>
 
 </body>
 </html>
