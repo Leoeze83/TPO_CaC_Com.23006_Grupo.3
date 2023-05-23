@@ -51,8 +51,64 @@
             </a>
         </aside>
         <article class="contenido">
-            <h1> Planes para cualquier nivel de ambición </h1>
-            <img src="./imagenes/hero.png" alt="" class="gallery-img">
+            <h1> Ver información de Cripto Easy </h1>
+            <input type="text" id="cripto-input" placeholder="Ingrese símbolos separados por comas (ejemplo: BTC,ETH,LTC)">
+            <button onclick="obtenerDatos()">Obtener Datos</button>
+            <div  class="mostrar"  id="resultado-api"></div>
+            <script>
+                const apiUrl = 'https://api.coincap.io/v2/assets';
+                const resultadoElemento = document.getElementById('resultado-api');
+        
+                function obtenerDatos() {
+                    const criptoInput = document.getElementById('cripto-input').value;
+        
+                    // Obtener los símbolos de las criptomonedas ingresadas
+                    const simbolos = criptoInput.split(',');
+        
+                    simbolos.forEach(simbolo => {
+                        // Construir la URL de la API para cada símbolo
+                        const url = `${apiUrl}/${simbolo}`;
+        
+                        // Realizar la solicitud a la API utilizando fetch
+                        fetch(url)
+                            .then(response => response.json())
+                            .then(data => {
+                                // Verificar si se encontró la criptomoneda
+                                if (data.data) {
+                                    const cripto = data.data;
+                                    const nombre = cripto.name;
+                                    const precio = cripto.priceUsd;
+                                    const cambio = cripto.changePercent24Hr;
+        
+                                    // Crear un elemento de cuadro para mostrar los resultados
+                                    const boxElemento = document.createElement('div');
+                                    boxElemento.classList.add('box');
+        
+                                    // Agregar el contenido del cuadro
+                                    boxElemento.innerHTML = `
+                        <h3>${nombre} (${simbolo})</h3>
+                        <p>Precio: $${precio}</p>
+                        <p>Cambio en las últimas 24 horas: ${cambio}%</p>
+                      `;
+        
+                                    // Agregar el cuadro al elemento de resultados
+                                    resultadoElemento.appendChild(boxElemento);
+                                } else {
+                                    // Mostrar un mensaje de error si no se encontró la criptomoneda
+                                    const errorElemento = document.createElement('p');
+                                    errorElemento.textContent = `No se encontró información para la criptomoneda con símbolo ${simbolo}`;
+                                    resultadoElemento.appendChild(errorElemento);
+                                }
+                            })
+                            .catch(error => {
+                                // Mostrar un mensaje de error si ocurrió un problema durante la solicitud
+                                const errorElemento = document.createElement('p');
+                                errorElemento.textContent = `Error: ${error.message}`;
+                                resultadoElemento.appendChild(errorElemento);
+                            });
+                    });
+                }
+            </script>
 
         </article>
         <footer class="footer">
