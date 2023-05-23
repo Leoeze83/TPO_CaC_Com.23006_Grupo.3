@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -18,6 +19,7 @@ body {
   color: white;
 
 }
+
 h1,
 h2,
 h3,
@@ -31,17 +33,18 @@ h4 {
   display: block;
   padding-top: 10px;
   padding-bottom: 5px;
-  color:  #ff9100;
+  color: #ffffff;
   text-decoration: none;
   text-align: center;
-  background: #a35858;
+  background: #f1c76c;
   border-radius: 10px;
 
 
 }
 
 .menu-link:hover {
-  background: #6c5e5e;
+  background:#ebd9b3;
+  color: #f1c76c;
 
 }
 
@@ -51,7 +54,7 @@ h4 {
   list-style: none;
   display: grid;
   grid-auto-flow: column;
- /* grid-template-columns: repeat(auto-fill, 120px);*/
+  /* grid-template-columns: repeat(auto-fill, 120px);*/
   /* justify-content: center;
   justify-content: space-between; */
 }
@@ -65,7 +68,7 @@ h4 {
 
 .grid-container>* {
   box-shadow: -1px 1px 7px 0px rgb(0, 0, 0, 0.75);
-  border-radius: 4px;
+  border-radius: 0px;
   padding: 0px;
   text-align: center;
 
@@ -93,7 +96,7 @@ h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
- 
+
 
 }
 
@@ -101,7 +104,7 @@ h4 {
   grid-area: navbar;
   background-color: rgb(0, 0, 0);
   padding-top: 5px;
-  
+
 }
 
 
@@ -134,8 +137,8 @@ h4 {
 
     /*forma mas elegante de poner el tamaño vista para tables*/
     grid-template:
-      "header" 100px
       "navbar" 50px
+      "header" 100px
       "izquierda" auto
       "contenido" 100px
       "footer" 100px;
@@ -162,7 +165,7 @@ h4 {
   }
 
   .menu-item {
-   /* padding-left: 10px;*/
+    /* padding-left: 10px;*/
     border-radius: 10px;
 
 
@@ -185,8 +188,8 @@ h4 {
 
     /*forma mas elegante de poner el tamaño vista para tables*/
     grid-template:
-      "header header" 100px
       "navbar navbar" 50px
+      "header header" 100px
       "izquierda contenido" auto
       "footer footer" 100px / 200px auto;
     /* luego del eslash se pone el ancho de las columnas*/
@@ -222,12 +225,12 @@ h4 {
 }
 
 /*vista para monitores*/
-@media (min-width 1360px) {
+@media (min-width 1180px) {
   .grid-container {
 
     grid-template:
-      "header header header" 100px
-      "navbar izquierda contenido" auto
+      "navbar navbar navbar" 100px
+      "header izquierda contenido" auto
       "footer footer footer" 100px / 200px auto 200px;
   }
 
@@ -248,6 +251,7 @@ h4 {
     object-fit: cover;
 
   }
+
   .menu-item {
     /*padding-left: 20px;*/
     border-radius: 10px;
@@ -269,3 +273,15 @@ h4 {
 }
 
 /* llamando nuestra Api por medio de FETCH*/
+.box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.mostrar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+
+}
