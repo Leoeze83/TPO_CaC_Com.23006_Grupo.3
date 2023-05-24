@@ -27,6 +27,13 @@ h4 {
   font-family: "Comfortaa", sans-serif;
   font-weight: bold;
   font-style: normal;
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-weight: bolder;
+  font-size: x-large;
+  font-stretch: extra-expanded;
+  color: orange
 }
 
 .menu-link {
@@ -43,7 +50,7 @@ h4 {
 }
 
 .menu-link:hover {
-  background:#ebd9b3;
+  background: #ebd9b3;
   color: #f1c76c;
 
 }
@@ -140,7 +147,7 @@ h4 {
       "navbar" 50px
       "header" 100px
       "izquierda" auto
-      "contenido" 100px
+      "contenido" auto
       "footer" 100px;
     /* luego del eslash se pone el ancho de las columnas*/
 
@@ -222,6 +229,7 @@ h4 {
   }
 
 
+
 }
 
 /*vista para monitores*/
@@ -278,10 +286,12 @@ h4 {
   padding: 10px;
   margin-bottom: 10px;
 }
+
 .mostrar {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  position: absolute;
+  justify-content: space-between;
+  display: block;
 
 }
