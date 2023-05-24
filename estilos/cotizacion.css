@@ -43,21 +43,21 @@ h4 {
   color: #ffffff;
   text-decoration: none;
   text-align: center;
-  background: #f1c76c;
-  border-radius: 10px;
+  background: #000000;
+  
 
 
 }
 
 .menu-link:hover {
-  background: #ebd9b3;
+  background: #000000;
   color: #f1c76c;
 
 }
 
 .menu {
   margin: 0;
-  padding-left: 10px;
+  padding-left: 0px;
   list-style: none;
   display: grid;
   grid-auto-flow: column;
@@ -67,14 +67,14 @@ h4 {
 }
 
 .menu-item {
-  padding-left: 1px;
-  border-radius: 10px;
+  padding-left: 0px;
+  border-radius: 0px;
 
 
 }
 
 .grid-container>* {
-  box-shadow: -1px 1px 7px 0px rgb(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 7px 0px rgb(0, 0, 0, 0.75);
   border-radius: 0px;
   padding: 0px;
   text-align: center;
@@ -144,7 +144,7 @@ h4 {
 
     /*forma mas elegante de poner el tamaño vista para tables*/
     grid-template:
-      "navbar" 50px
+      "navbar" auto
       "header" 100px
       "izquierda" auto
       "contenido" auto
@@ -166,18 +166,22 @@ h4 {
     list-style: none;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fill, 120px);
+    grid-template-columns: repeat(auto-fill, 85px);
     justify-content: center;
     justify-content: space-between;
   }
 
-  .menu-item {
-    /* padding-left: 10px;*/
-    border-radius: 10px;
+  .menu-item>li {
+    padding-right: 15px;
+    border-radius: 0px;
 
 
   }
-
+  .logo {
+    width: auto;
+    margin-right: 0px;
+    justify-content: space-between;
+  }
 
 }
 
@@ -195,7 +199,7 @@ h4 {
 
     /*forma mas elegante de poner el tamaño vista para tables*/
     grid-template:
-      "navbar navbar" 50px
+      "navbar navbar" auto
       "header header" 100px
       "izquierda contenido" auto
       "footer footer" 100px / 200px auto;
@@ -211,23 +215,26 @@ h4 {
   }
 
   .menu {
-    margin: 0;
-    padding: 0;
     list-style: none;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fill, 290px);
+    grid-template-columns: repeat(auto-fill, 220px);
     justify-content: center;
     justify-content: space-between;
   }
 
   .menu-item {
-    /*padding-left: 20px;*/
+    padding-left: 20px;
     border-radius: 10px;
 
 
   }
-
+.menu > li {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: orange;
+  font-size: 30px;
+  justify-content: space-between;
+}
 
 
 }
@@ -266,6 +273,11 @@ h4 {
 
 
   }
+  .menu > li {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: orange;
+    font-size: 20px;
+  }
 
 }
 
@@ -295,3 +307,4 @@ h4 {
   display: block;
 
 }
+
