@@ -4,30 +4,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
-  <link rel="stylesheet" href="estilos/estilos.css" />
-  <link rel="stylesheet" href="estilos/quienes.css" />
-  <title>Quiénes somos?</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto-Easy</title>
+  <link rel="stylesheet" href="./estilos/estilos.css" />
+  <link rel="stylesheet" href="./estilos/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="imagenes/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imagenes/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="imagenes/favicon_io/site.webmanifest">
 </head>
 
 <body>
   <header>
-    <div>
-      <nav class="menu">
-        <a href="index.html">Inicio</a>
-        <a href="quienes.html">Nosotros</a>
-        <a href="cotizacion.html">Cotización</a>
-        <a href="contactos.html">Contacto</a>
+    <div class="cont_nav">
+      <a href="./index.html">
+        <img class="logo" src="imagenes/B-48px.png" alt="Logo- Inicio">
+      </a>
+      <div class="title-adapt">
+        <h2>Cripto Easy</h2>
+      </div>
+      <input type="checkbox" id="menu-check">
+      <label id="menu" for="menu-check">
+        <span id="menu-abrir">&#9776 </span>
+        <span id="menu-cerrar">X</span>
+      </label>
+      <nav>
+        <ul>
+          <li> <a href="./index.html">Inicio</a></li>
+          <li><a href="./quienes.html">Nosotros</a></li>
+          <li> <a href="./cotizacion.html">Cotizacion</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
       </nav>
     </div>
+    </div>
   </header>
+  <br>
+  <br>
+
   <section>
-    <div class="contenedor">
-      <div class="bloque">
+    <div>
+      <div>
         <img src="imagenes/equipo.png" alt="equipo" onmouseover="src='imagenes/bitcoin.png'"
-          onmouseout="src='imagenes/equipo.png'" />
-        <h2>Quiénes somos?</h2>
+          onmouseout="src='imagenes/equipo.png'" class="nosotros"/>
+        <h1>Quiénes somos?</h1>
         <p>
           Bienvenidos a Crypto-Easy, somos una plataforma de compra y venta de
           criptomonedas que se dedica a ofrecer servicios de calidad a
@@ -63,8 +86,13 @@
       </div>
     </div>
   </section>
+  <hr>
+  <hr>
   <footer>
-    <p>Crypto-Easy - Todos los derechos reservados 2023.</p>
+    <figcaption class="firma">
+      &copy; by Group III - 23006 for Codo a Codo &copy;
+    </figcaption>
+    </div>
   </footer>
 </body>
 

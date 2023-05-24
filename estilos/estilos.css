@@ -37,6 +37,12 @@ body {
   color: #000000;
 }
 
+.nosotros {
+  display: block;
+  margin: 2rem auto 0 auto;
+  width: 45%;
+}
+
 header {
   background-image: url(../imagenes/hero.png);
   background-size: cover;
@@ -51,6 +57,9 @@ header {
   header {
     padding-bottom: 45rem;
   }
+  nosotros {
+    padding-bottom: 45rem;
+  }
 
   .menu {
     width: 100%;
@@ -60,6 +69,9 @@ header {
 @media (max-width: 1280px) {
   header {
     padding-bottom: 30rem;
+  }
+  .nosotros {
+    width: 80%;
   }
 }
 
