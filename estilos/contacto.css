@@ -229,3 +229,140 @@ h1 {
   -webkit-text-stroke: 1px var(--main-dark);
 }
 
+
+  /* footer */
+
+.firma {
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-weight: bolder;
+  font-size: x-large;
+  font-stretch: extra-expanded;
+  color: orange
+}
+
+/*Responsive*/
+
+@media (min-width: 1280px) {
+  header {
+    background-size: contain;
+  }
+
+  p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 1010px) {
+  div .logo {
+    width: auto;
+    margin-right: 0px;
+  }
+
+  .cont_nav {
+    display: flex;
+    place-content: space-between;
+  }
+
+  .title-adapt {
+    display: block;
+    position: absolute;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  /* Menu Hamburguer*/
+
+  #menu-check:not(:checked)~nav {
+    display: none
+  }
+
+  #menu-check:checked~nav {
+    display: block;
+  }
+
+  #menu {
+    display: block;
+    color: #ff9100;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 0.5em;
+    top: 0.3em;
+    z-index: 9999;
+  }
+
+  #menu:hover {
+    color: black;
+    background-color: #ff9100;
+  }
+
+  #menu-cerrar {
+    display: none;
+  }
+
+  #menu-check:checked~label #menu-abrir {
+    display: none;
+  }
+
+  #menu-check:checked~label #menu-cerrar {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 100%;
+    background-color: rgb(240, 237, 237);
+    padding-top: 0.3em;
+    opacity: 70%;
+    z-index: 9999;
+  }
+
+  nav li a {
+    color: red;
+    font-weight: bold;
+  }
+
+  nav {
+    display: inline-flex;
+    margin-top: 50px;
+    overflow: scroll;
+  }
+
+  nav li a {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: x-large;
+  }
+
+  /*-----------------------------------------------*/
+
+  img.figanimada {
+    width: 100%;
+  }
+
+  img.btc {
+    width: 95%;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  /* Footer*/
+
+  .firma {
+    font-size: medium;
+    padding-bottom: 7%;
+    padding-top: 4%;
+    color: var(--main-pie);
+    background-color: black;
+  }
+}
