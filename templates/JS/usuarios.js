@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
       usuario: [],
-      url: "http://mcerda.pythonanywhere.com/productos", // colcoar dir de base de datos
+      url: "https://lucho23006.pythonanywhere.com/usuarios", // colcoar dir de base de datos
       error: false,
       cargando: true,
       id: 0,
