@@ -1,15 +1,19 @@
-# TPO-_CaC_Com.23006_Grupo.3
-Repositorio contenedor de TPO -Desarrollo Web -Codo a Codo ---> Entrega: del 22 al 24 de Mayo 2023
-------------------------------------------------------------------------------
-**************************************************************************************
+# TPO-\_CaC_Com.23006_Grupo.3
+
+## Repositorio contenedor de TPO -Desarrollo Web -Codo a Codo ---> Entrega: del 22 al 24 de Mayo 2023
+
+---
 
 Link implementado en la web: https://leoeze83.github.io/TPO_CaC_Com.23006_Grupo.3/
 
-**************************************************************************************
+---
+
 CONSIGNAS:
 
 TPO Desarrollo Web
-HTML, CSS y Javascript
+/// Front End ///
+
+HTML, CSS y Javascript :
 
 ¿Cuándo se entrega?
 Clase 22: miércoles 17 al viernes 19 de mayo de 2023.
@@ -64,3 +68,8 @@ informar: link a la web navegable, link al repositorio utilizado, integrantes y 
 consideren necesarios agregar a la entrega.
 Nota: si ya tenés un proyecto comenzado para este curso, podrás usarlo para esta entrega
 agregándole lo que falte para cumplir con los requisitos
+
+---
+
+/// BackEnd ///:
+Python , Vuejs, SQL , Flask (DB: XAAMP - localhost / pythonanywere - servidor cloud)
