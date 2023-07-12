@@ -3,31 +3,6 @@ from flask_cors import CORS  # del modulo flask_cors importar CORS
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 app = Flask(__name__)  # crear el objeto app de la clase Flask
-# ###############################
-# from flask import render_template
-# from flaskext.mysql import MySQL
-# app = Flask(__name__)  # crear el objeto app de la clase Flask
-# ############
-# mysql=MySQL()
-# app.config['MYSQL_DATABASE_HOST']= 'localhost'
-# app.config['MYSQL_DATABASE_USER']= 'root'
-# app.config['MYSQL_DATABASE_PASSWORD']= 'root'
-# app.config['MYSQL_DATABASE_db']= 'Proyecto'
-# mysql.init_app(app)
-
-
-# @app.route('/')
-# def index():
-#     sql="INSERT INTO 'Proyecto', 'usuario' ('nombre','correo','telefono','mensaje') VALUES('Pepe', 'pepe@prueba.como', '1100220011', 'Fue lo mejor del amor');"
-#     conn=mysql.connect()
-#     cursor=conn.cursor()
-#     cursor.execute(sql)
-#     conn.commit()
-    
-#     return render_template('index.html')
-
-# ##########33
-
 
 CORS(app)  # modulo cors es para que me permita acceder desde el frontend al backend
 # configuro la base de datos, con el nombre el usuario y la clave
